@@ -24,7 +24,7 @@ function App() {
   const [gpsLocation, setGpsLocation] = useState(false)
   const [error, setError] = useState(false);
 
-  console.log('here', weather);
+  console.log('here', process.env.REACT_APP_RAPID_KEY);
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       // setLatitude(position.coords.latitude)
