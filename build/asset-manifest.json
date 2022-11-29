@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.17468ac4.chunk.css",
+    "main.js": "/static/js/main.c4d6d348.chunk.js",
+    "main.js.map": "/static/js/main.c4d6d348.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.580e81a6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.580e81a6.js.map",
+    "static/js/2.ed58fba9.chunk.js": "/static/js/2.ed58fba9.chunk.js",
+    "static/js/2.ed58fba9.chunk.js.map": "/static/js/2.ed58fba9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1000d1a7241baecee71654372470eb53.js": "/precache-manifest.1000d1a7241baecee71654372470eb53.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.17468ac4.chunk.css.map": "/static/css/main.17468ac4.chunk.css.map",
+    "static/js/2.ed58fba9.chunk.js.LICENSE": "/static/js/2.ed58fba9.chunk.js.LICENSE",
+    "static/media/index.css": "/static/media/warm-bg.635ed87d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.580e81a6.js",
+    "static/js/2.ed58fba9.chunk.js",
+    "static/css/main.17468ac4.chunk.css",
+    "static/js/main.c4d6d348.chunk.js"
+  ]
+}

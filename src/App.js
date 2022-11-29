@@ -86,7 +86,7 @@ function App() {
 
     return `${day} ${date} ${month} ${year}`
   }
-
+let weatherKeys = Object.keys(weather)
   let icons = 'http://openweathermap.org/img/wn/'
   return (
     <div className='main'>
@@ -110,7 +110,7 @@ function App() {
               onKeyPress={search}
             />
           </div>
-          {(typeof weather.main != "undefined") ? (
+          {(typeof weather.main != "undefined")? (
             <div>
               <div className="location-box">
                 <div className="location">{weather.name}, {weather.sys.country}</div>
@@ -126,7 +126,7 @@ function App() {
                 </div>
               </div>
             </div>
-          ) : <p>not</p>
+          ) : ('')
           }
           <div onClick={() =>
             setGpsLocation(!gpsLocation)

@@ -30,7 +30,7 @@ main {
 }
 
 .search-box {
-  width: 40%;
+  width: 50%;
   margin: 10px auto;
 }
 
@@ -175,4 +175,23 @@ position: absolute;
 transform: translate(-50%, -50%);
 /* top: 0%; */
   left: 50%;
+}
+@media  screen and (max-width:400px){
+  .search-box{
+    width: 100%;
+    margin-top: 50px;
+  }
+ 
+  .cool-link{
+    margin: 20px;
+  }
+}
+@media  screen and (max-width:600px){
+  .search-box{
+    width: 70%;
+    margin-top: 50px;
+  }
+  .cool-link{
+    margin: 20px;
+  }
 }
