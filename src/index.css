@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 body {
@@ -185,6 +188,22 @@ transform: translate(-50%, -50%);
   .cool-link{
     margin: 20px;
   }
+}
+@media  screen and (max-width:700px){
+  footer {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+  }
+  footer p{
+font-size: 14px;
+  }
+}
+@media  screen and (max-width:400px){
+footer {
+  font-size: 13px;
+  /* width: auto; */
+}
 }
 @media  screen and (max-width:600px){
   .search-box{

@@ -1,24 +1,19 @@
-import * as React from 'react';
+import   React,{useState} from 'react';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import { IconButton, Snackbar } from "@mui/material";
+import ShareIcon from "@mui/icons-material/Share";
 import MenuIcon from '@mui/icons-material/Menu';
-export default function SwipeableTemporaryDrawer({  geocoding }) {
+import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+
+export default function SwipeableTemporaryDrawer({  geocoding,flagImage,setIsCopied }) {
   const [state, setState] = React.useState({ left: false });
-  console.log('geo',geocoding);
   const { display_name,address :{postcode,city,state:stateName,suburb
   }} = geocoding
-  console.log('draw',stateName);
-
-  
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event &&
@@ -30,7 +25,10 @@ export default function SwipeableTemporaryDrawer({  geocoding }) {
 
     setState({ ...state, [anchor]: open });
   };
-
+  const handleClick = (text) => {
+    setIsCopied(true);
+    navigator.clipboard.writeText(text);
+  };
 
   const list = (anchor) => (
     <Box
@@ -59,12 +57,25 @@ export default function SwipeableTemporaryDrawer({  geocoding }) {
           <br />
           <br />
           <h3>State</h3>
-          {stateName}
+          <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',width:'100%'}}>
+
+          
+          {stateName}  
+      <IconButton onClick={()=>handleClick(stateName)} color="primary">
+        <ContentPasteIcon />
+      </IconButton>
+     
+          </div>
+       
           <br />
-          <br />
+ 
           <h3>Area</h3>
           {suburb}
           <br />
+          <br />
+          <h3>Country</h3>
+
+          <img  style={{paddingTop:'5px'}} src={flagImage} width={20}/>
         </ListItem>
 
 
